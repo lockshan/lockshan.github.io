@@ -18,18 +18,21 @@
 			font-size: x-large;
 		}
         button {
-            width: 250px;
-            padding: 50px 0;
-            margin: 40px;
+            width: 200px;
+            padding: 20px 0;
+            margin: 20px;
             text-align: center;
 			font-size: x-large;
         }
+		#valueContainer {
+			font-size: 8em;
+		}
     </style>
     
 </head>
 <body style="text-align: center;">
   <p><strong><span id="bleState" style="color:#d13a30;">Disconnected</span></strong></p>
-  <p><span style="font-size: 12em;" id="valueContainer">?</span></p>
+  <p><span id="valueContainer">?</span></p>
   <button id="onButton">LOCK</button>
   <button id="offButton">UNLOCK</button>
   <p>Last checked: <span id="timestamp"></span></p>
