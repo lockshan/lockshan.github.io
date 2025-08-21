@@ -142,9 +142,9 @@
         console.log("Characteristic value changed: ", newValueReceived);
         
         if (newValueReceived == "ON") {
-            retrievedValue.innerHTML = " &#128275;";    // unlocked icon
+            retrievedValue.innerHTML = "&#128275;";    // unlocked icon
         } else {
-            retrievedValue.innerHTML = " &#128274;";    // locked icon
+            retrievedValue.innerHTML = "&#128274;";    // locked icon
         }
         timestampContainer.innerHTML = getDateTime();
     }
@@ -168,7 +168,7 @@
         if (bleServer && bleServer.connected) {
             bleServiceFound.getCharacteristic(ledCharacteristic)
             .then(characteristic => {
-                retrievedValue.innerHTML = "...";
+                retrievedValue.innerHTML = "&#x23F3;";    //Hourglass Not Done Emoji
                 console.log("Found the LED characteristic: ", characteristic.uuid);
                 const data = new Uint8Array([value]);
                 return characteristic.writeValue(data);
