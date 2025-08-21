@@ -33,8 +33,8 @@
 <body style="text-align: center;">
   <p><strong><span id="bleState" style="color:#d13a30;">Disconnected</span></strong></p>
   <p><span id="valueContainer">?</span></p>
-  <button id="onButton">LOCK</button>
-  <button id="offButton">UNLOCK</button>
+  <button id="offButton">LOCK</button>
+  <button id="onButton">UNLOCK</button>
   <p>Last checked: <span id="timestamp"></span></p>
   <p>Last value sent: <span id="valueSent"></span></p>
 </body>
@@ -142,9 +142,9 @@
         console.log("Characteristic value changed: ", newValueReceived);
         
         if (newValueReceived == "ON") {
-            retrievedValue.innerHTML = " &#128274;";    // locked icon
-        } else {
             retrievedValue.innerHTML = " &#128275;";    // unlocked icon
+        } else {
+            retrievedValue.innerHTML = " &#128274;";    // locked icon
         }
         timestampContainer.innerHTML = getDateTime();
     }
@@ -174,9 +174,9 @@
             })
             .then(() => {
                 if (value == 1) {
-                    latestValueSent.innerHTML = "Lock";
-                } else {
                     latestValueSent.innerHTML = "Unlock";
+                } else {
+                    latestValueSent.innerHTML = "Lock";
                 }
                 console.log("Value written to LEDcharacteristic:", value);
             })
