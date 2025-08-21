@@ -1,5 +1,12 @@
 {
     "short_name": "Lock",
     "name": "Lock",
-    "start_url": "/"
-  }
+    "start_url": "/",
+    "icons": [
+    {
+        "src": "512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+    }
+    ]
+}
