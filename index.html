@@ -152,7 +152,7 @@
 
     function changeStateRequest(value){
         console.log("Button prompt for connection");
-        if (!promptedBLEDeviceConnect) {
+        if (!promptedBLEDeviceConnect || !bleServer.connected) {
             connectToDevice()
             .then(async () => {
                 // hack to make sure connection is completed
